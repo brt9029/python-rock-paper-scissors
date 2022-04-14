@@ -28,28 +28,20 @@ scissors = '''
 '''
 
 #Write your code below this line 👇
+game_images = [rock, paper, scissors]
 print("Choose one of the following: Type 0 for Rock, 1 for Paper, or 2 for Scissors.")
-choice = input()
-if choice == "0":
-  print(rock)
-elif choice =="1":
-  print(paper)
-else:
-  print(scissors)
-computer_choice = str(random.randint(0,2))
+choice = int(input())
+print(game_images[choice])
+
+computer_choice = random.randint(0,2)
 print("Computer chose:")
-if computer_choice == "0":
-  print(rock)
-elif computer_choice =="1":
-  print(paper)
-elif computer_choice == "2":
-  print(scissors)
+print(game_images[computer_choice])
   
-if choice == "0" and computer_choice == "2":
+if choice == 0 and computer_choice == 2:
   print("You win!")
-elif choice == "1" and computer_choice == "0":
+elif choice == 1 and computer_choice == 0:
   print("You win!")
-elif choice == "2" and computer_choice == "1":
+elif choice == 2 and computer_choice == 1:
   print("You win!")
 elif choice == computer_choice:
   print("It's a draw.")
